@@ -121,7 +121,6 @@ class LoginTemplate {
 
 class Custom_Page_Template_Plugin {
     public function __construct() {
-        // Register actions and filters
         add_filter('theme_page_templates', array($this, 'register_page_template'));
         add_filter('page_template', array($this, 'load_login_template'));
     }
@@ -139,5 +138,4 @@ class Custom_Page_Template_Plugin {
     }
 }
 
-// Create an instance of the plugin class
 $custom_page_template_plugin = new Custom_Page_Template_Plugin();
